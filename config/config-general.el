@@ -29,6 +29,8 @@
 (setq backup-inhibited t)
 (setq auto-save-default nil)
 
+(setq ring-bell-function 'ignore)
+
 (windmove-default-keybindings) ;; move around with C-<arrow-key>
 
 (provide 'config-general)
