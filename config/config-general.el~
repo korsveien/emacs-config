@@ -1,0 +1,30 @@
+(defun top-join-line ()
+  (interactive)
+  (delete-indentation 1))
+
+(defun mark-current-line ()
+  (interactive)
+  (end-of-line)
+  (set-mark (line-beginning-position)))
+
+(defun save-anyway ()
+  "Save file, even if there is no change."
+  (interactive)
+  (set-buffer-modified-p t)
+  (save-buffer))
+
+(global-set-key (kbd "RET") 'newline-and-indent)
+(global-set-key (kbd "C-j") 'top-join-line)
+(global-set-key (kbd "C-l") 'mark-current-line)
+(global-set-key (kbd "C-x C-s") 'save-anyway)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+(defun mark-current-line ()
+  (interactive)
+  (end-of-line)
+  (set-mark (line-beginning-position)))
+
+(provide 'config-general)
+
+
+
