@@ -4,13 +4,15 @@
 (package-initialize)
 
 (defvar my-packages '(clojure-mode
-		      expand-region
-		      paredit
-		      cider
-		      projectile
-		      rainbow-delimiters
-		      color-theme-sanityinc-tomorrow
-		      smex))
+											expand-region
+											paredit
+											cider
+											projectile
+											rainbow-delimiters
+											color-theme-sanityinc-tomorrow
+											company
+											smartparens
+											smex))
 
 (when (not package-archive-contents)
   (package-refresh-contents))
@@ -22,6 +24,7 @@
 (add-to-list 'load-path "~/.emacs.d/config")
 
 (require 'config-general)
+(require 'config-lisp)
 
 (custom-set-variables
  '(inhibit-startup-screen t)
