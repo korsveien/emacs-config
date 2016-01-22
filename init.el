@@ -13,6 +13,7 @@
 											color-theme-sanityinc-tomorrow
 											company
 											smartparens
+											guide-key
 											smex))
 
 (when (not package-archive-contents)
