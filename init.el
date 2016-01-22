@@ -9,6 +9,7 @@
 											cider
 											projectile
 											rainbow-delimiters
+											exec-path-from-shell
 											color-theme-sanityinc-tomorrow
 											company
 											smartparens
@@ -20,6 +21,9 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 (add-to-list 'load-path "~/.emacs.d/config")
 
