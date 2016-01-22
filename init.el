@@ -4,12 +4,12 @@
 (package-initialize)
 
 (defvar my-packages '(clojure-mode
+		      expand-region
 		      paredit
 		      cider
 		      projectile
 		      rainbow-delimiters
-		      smex
-		      majapahit-theme))
+		      smex))
 
 (when (not package-archive-contents)
   (package-refresh-contents))
@@ -23,7 +23,6 @@
 (require 'config-general)
 
 (custom-set-variables
- '(custom-enabled-themes (quote (majapahit)))
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(menu-bar-mode nil)
@@ -39,5 +38,3 @@
  '(show-trailing-whitespace t)
  '(tool-bar-mode nil)
  '(x-select-enable-clipboard t))
-
-(provide 'config-general)
