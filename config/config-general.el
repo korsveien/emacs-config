@@ -52,6 +52,8 @@
 
 (windmove-default-keybindings) ;; move around with C-<arrow-key>
 
+(setq company-idle-delay 0) ;; immediate autocomplete
+
 (provide 'config-general)
 
 
