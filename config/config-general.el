@@ -25,11 +25,11 @@
 (global-set-key (kbd "C-l") 'mark-current-line)
 (global-set-key (kbd "C-x C-s") 'save-anyway)
 (global-set-key (kbd "C-=") 'er/expand-region)
-(global-set-key "\C-k" 'kill-whole-line)
-(global-set-key "\C-w" 'backward-kill-global)
-(global-set-key "\C-o" 'insert-blank-line-below)
+(global-set-key (kbd "C-k") 'kill-whole-line)
+(global-set-key (kdb "C-w") 'backward-kill-global)
+(global-set-key (kbd "C-o") 'insert-blank-line-below)
+(global-set-key (kbd "\C-d") "\C-a\Cm- \C-n\M-w\C-y\C-p") ;; duplicate line
 
-(global-set-key "\C-d" "\C-a\C- \C-n\M-w\C-y\C-p")
 (global-linum-mode t) ;; Display line number in left column
 (global-auto-revert-mode t) ;; Auto update file when change
 
