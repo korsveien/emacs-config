@@ -9,6 +9,7 @@
 		      cider
 		      projectile
 		      rainbow-delimiters
+		      noctilux-theme
 		      smex))
 
 (when (not package-archive-contents)
@@ -38,3 +39,5 @@
  '(show-trailing-whitespace t)
  '(tool-bar-mode nil)
  '(x-select-enable-clipboard t))
+
+(load-theme 'noctilux t)
