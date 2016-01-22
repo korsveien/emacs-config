@@ -36,7 +36,6 @@
 (global-set-key (kbd "C-x C-s") 'save-anyway)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-k") 'kill-whole-line)
-(global-set-key (kbd "C-w") 'backward-kill-global)
 (global-set-key (kbd "C-o") 'insert-blank-line-below)
 (global-set-key (kbd "C-d") 'duplicate-line)
 
