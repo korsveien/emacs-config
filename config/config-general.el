@@ -20,15 +20,25 @@
     (end-of-line))
   (newline-and-indent))
 
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+)
+
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-j") 'top-join-line)
 (global-set-key (kbd "C-l") 'mark-current-line)
 (global-set-key (kbd "C-x C-s") 'save-anyway)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-k") 'kill-whole-line)
-(global-set-key (kdb "C-w") 'backward-kill-global)
+(global-set-key (kbd "C-w") 'backward-kill-global)
 (global-set-key (kbd "C-o") 'insert-blank-line-below)
-(global-set-key (kbd "\C-d") "\C-a\Cm- \C-n\M-w\C-y\C-p") ;; duplicate line
+(global-set-key (kbd "C-d") 'duplicate-line)
 
 (global-linum-mode t) ;; Display line number in left column
 (global-auto-revert-mode t) ;; Auto update file when change
