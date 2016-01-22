@@ -39,7 +39,6 @@
 (global-set-key (kbd "C-o") 'insert-blank-line-below)
 (global-set-key (kbd "C-d") 'duplicate-line)
 
-(global-linum-mode t) ;; Display line number in left column
 (global-auto-revert-mode t) ;; Auto update file when change
 
 ;; Don't create backup files
