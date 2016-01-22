@@ -13,13 +13,21 @@
   (set-buffer-modified-p t)
   (save-buffer))
 
+(defun insert-blank-line-below ()
+  "Insert a newline below the current line and put point at beginning."
+  (interactive)
+  (unless (eolp)
+    (end-of-line))
+  (newline-and-indent))
+
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-j") 'top-join-line)
 (global-set-key (kbd "C-l") 'mark-current-line)
 (global-set-key (kbd "C-x C-s") 'save-anyway)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key "\C-k" 'kill-whole-line)
-(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-w" 'backward-kill-global)
+(global-set-key "\C-o" 'insert-blank-line-below)
 
 (global-set-key "\C-d" "\C-a\C- \C-n\M-w\C-y\C-p")
 (global-linum-mode t) ;; Display line number in left column
