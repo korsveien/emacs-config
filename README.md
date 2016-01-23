@@ -1,4 +1,4 @@
 #Todo
-1. Configure emacs for clojure
-2. Learn clojure
-3. Be awesome
+* Resize cider-repl on open
+* Map C-l to clear repl
+* Fix up/down-navigation in clojure
