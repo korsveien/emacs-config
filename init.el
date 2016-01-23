@@ -9,11 +9,12 @@
 											cider
 											projectile
 											rainbow-delimiters
-											exec-path-from-shell
-											color-theme-sanityinc-tomorrow
 											company
+											exec-path-from-shell
 											smartparens
 											guide-key
+											color-theme-sanityinc-tomorrow
+											clojure-mode-extra-font-locking
 											smex))
 
 (when (not package-archive-contents)
@@ -30,6 +31,8 @@
 
 (require 'config-general)
 (require 'config-lisp)
+
+(eval-after-load 'clojure-mode '(require 'clojure-mode-extra-font-locking))
 
 (custom-set-variables
  '(inhibit-startup-screen t)

@@ -10,4 +10,6 @@
 (add-hook 'clojure-mode-hook 'lisp-mode-minors)
 (add-hook 'emacs-lisp-mode-hook 'lisp-mode-minors)
 
+
+
 (provide 'config-lisp)
