@@ -45,9 +45,6 @@
 (setq backup-inhibited t)
 (setq auto-save-default nil)
 
-(setq guide-key/guide-key-sequence '("C-x" "C-c" "C-h"))
-(guide-key-mode 1)
-
 (setq ring-bell-function 'ignore)
 
 (windmove-default-keybindings) ;; move around with C-<arrow-key>

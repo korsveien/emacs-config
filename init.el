@@ -1,21 +1,20 @@
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/"))
+             '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
 (defvar my-packages '(clojure-mode
-											expand-region
-											paredit
-											cider
-											projectile
-											rainbow-delimiters
-											company
-											exec-path-from-shell
-											smartparens
-											guide-key
-											color-theme-sanityinc-tomorrow
-											clojure-mode-extra-font-locking
-											smex))
+                       expand-region
+                       paredit
+                       cider
+                       projectile
+                       rainbow-delimiters
+                       company
+                       exec-path-from-shell
+                       smartparens
+                       color-theme-sanityinc-tomorrow
+                       clojure-mode-extra-font-locking
+                       smex))
 
 (when (not package-archive-contents)
   (package-refresh-contents))
