@@ -5,6 +5,7 @@
   (rainbow-delimiters-mode 1)
   (show-paren-mode 1)
 	(company-mode 1)
+	(projectile-mode 1)
   (eldoc-mode 1))
 
 (add-hook 'clojure-mode-hook 'lisp-mode-minors)

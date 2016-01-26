@@ -38,6 +38,7 @@
 (global-set-key (kbd "C-k") 'kill-whole-line)
 (global-set-key (kbd "C-o") 'insert-blank-line-below)
 (global-set-key (kbd "C-d") 'duplicate-line)
+(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
 (global-auto-revert-mode t) ;; Auto update file when change
 

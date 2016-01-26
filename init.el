@@ -1,4 +1,5 @@
 (require 'package)
+
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
@@ -14,6 +15,7 @@
                        smartparens
                        color-theme-sanityinc-tomorrow
                        clojure-mode-extra-font-locking
+											 flx-ido
                        smex))
 
 (when (not package-archive-contents)
@@ -28,8 +30,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/config")
 
-(require 'config-general)
 (require 'config-lisp)
+(require 'config-general)
+(require 'config-ido)
 
 (eval-after-load 'clojure-mode '(require 'clojure-mode-extra-font-locking))
 
